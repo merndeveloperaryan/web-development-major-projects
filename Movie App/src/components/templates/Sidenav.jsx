@@ -13,13 +13,13 @@ const Sidenav = () => {
           New Feeds
         </h1>
 
-        <Link className="hover:bg-[#6556CD] hover:text-white duration-300 rounded-lg px-3 py-2">
+        <Link to='/trending' className="hover:bg-[#6556CD] hover:text-white duration-300 rounded-lg px-3 py-2">
           <i className="mr-1 ri-fire-fill"></i> Trending
         </Link>
-        <Link className="hover:bg-[#6556CD] hover:text-white duration-300 rounded-lg px-3 py-2">
+        <Link to='/popular' className="hover:bg-[#6556CD] hover:text-white duration-300 rounded-lg px-3 py-2">
           <i className="mr-1 ri-sparkling-fill"></i> Popular
         </Link>
-        <Link className="hover:bg-[#6556CD] hover:text-white duration-300 rounded-lg px-3 py-2">
+        <Link to='/movie' className="hover:bg-[#6556CD] hover:text-white duration-300 rounded-lg px-3 py-2">
           <i className="mr-1 ri-movie-fill"></i> Movies
         </Link>
         <Link className="hover:bg-[#6556CD] hover:text-white duration-300 rounded-lg px-3 py-2">

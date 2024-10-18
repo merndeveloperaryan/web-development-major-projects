@@ -13,11 +13,11 @@ const HorizontalCards = ({ data }) => {
           <div className="flex flex-col gap-1">
             <h2 className="text-3xl font-medium text-gray-600 mt-2 leading-none px-2 tracking-tight my-2">
               <span className="text-xs font-semibold text-white">
-                {(item.title || item.name || item.original_name).slice(0, 20)}
+                {(item.title || item.name || item.original_name)?.slice(0, 20)}
               </span>
             </h2>
             <p className="text-xs font-medium text-gray-400 px-2 tracking-tight leading-none">
-              {item.overview.slice(0, 40)}
+              {item.overview?.slice(0, 40)}
             </p>
           </div>
         </div>

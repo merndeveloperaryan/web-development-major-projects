@@ -11,7 +11,7 @@ const Home = () => {
   document.title = "SCSDB | Movie App";
   const [wallpapers, setWallpapers] = useState(null);
   const [trending, setTrending] = useState(null);
-  const [category, setCategory] = useState("all");
+  const [category, setcategory] = useState("all");
 
   const getWallpapers = async () => {
     try {
@@ -39,7 +39,6 @@ const Home = () => {
     GetTrendingData();
   }, [category]);
 
- console.log(category);
 
   return wallpapers && trending ? (
     <div className="w-full h-screen bg-[#1f1e24] flex">
@@ -50,7 +49,7 @@ const Home = () => {
         <Banner data={wallpapers} />
         <div className="my-5 flex justify-between px-4">
           <h1 className="text-2xl font-normal text-zinc-300">Trending</h1>
-          <Dropdown title="Filter" options={["tv", "movie"]} func={(e)=> setCategory(e.target.value)} />
+          <Dropdown title="Filter" options={["tv", "movie"]} func={(e)=> setcategory(e.target.value)} />
         </div>
         <HorizontalCards data={trending} />
       </div>

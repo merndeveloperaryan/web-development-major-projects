@@ -7,7 +7,7 @@ const Dropdown = ({ title, options, func }) => {
         <option value="0" disabled>
           {title}
         </option>
-        {options.map((o, i) => (
+        {options && options.map((o, i) => (
           <option key={i} value={o}>
             {o.toUpperCase()}
           </option>
