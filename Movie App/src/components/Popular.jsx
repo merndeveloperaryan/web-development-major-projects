@@ -9,7 +9,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 
 const Popular = () => {
   const navigate = useNavigate();
-  const [category, setCategory] = useState('movie');
+  const [category, setCategory] = useState("movie");
   const [popular, setpopular] = useState([]);
   const [page, setPage] = useState(1);
   const [hasMore, sethasMore] = useState(true);
@@ -44,8 +44,8 @@ const Popular = () => {
   }, [category]);
 
   return popular && popular.length > 0 ? (
-    <div className="w-full min-h-screen p-[4%] bg-[#1f1e24] relative">
-      <div classname="w-full flex items-center justify-between">
+    <div className="w-full min-h-screen p-10 bg-[#1f1e24] relative">
+      <div className="w-full flex items-center justify-between">
         <h1 className="w-[9%] text-xl text-zinc-300 font-semibold flex items-center justify-between">
           <i
             onClick={() => navigate(-1)}
@@ -68,8 +68,8 @@ const Popular = () => {
         next={getPopularData}
         hasMore={hasMore}
         loader={
-          <h1 className="text-center text-white py-10 bg-black rounded-lg">
-            Loading....
+          <h1 className="text-center text-white py-10 rounded-lg">
+            <span className="inline-block w-5 h-5 animate-spin rounded-full border-b-2 border-green-600"></span>
           </h1>
         }
       >

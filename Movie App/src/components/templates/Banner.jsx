@@ -19,7 +19,7 @@ const Banner = ({ data }) => {
         {data.name || data.title || data.original_name || data.original_title}
       </h1>
       <p className="w-2/3 text-sm font-semibold mt-3 text-zinc-300">
-        {data.overview.slice(0, 150)}
+        {data.overview.slice(0, 150)} ... <Link to={`/${data.media_type}/details/${data.id}`} className="text-blue-400 text-sm font-semibold">more</Link>
       </p>
       <div className="my-2">
         <i className="ri-megaphone-fill text-yellow-400 text-lg mr-1"></i>{" "}
@@ -35,3 +35,6 @@ const Banner = ({ data }) => {
 };
 
 export default Banner;
+
+
+

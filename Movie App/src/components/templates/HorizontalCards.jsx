@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const HorizontalCards = ({ data }) => {
   return (
     <div className="w-full flex overflow-x-auto gap-2 rounded px-4">
       {data.map((item, index) => (
-        <div key={index} className="min-w-[15%] rounded bg-black mb-5 pb-5">
+        <Link to={`/${item.media_type}/details/${item.id}`} key={index} className="min-w-[15%] rounded bg-black mb-5 pb-5">
           <img
             className="w-full h-28 rounded object-cover object-center"
             src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
@@ -20,10 +21,12 @@ const HorizontalCards = ({ data }) => {
               {item.overview?.slice(0, 40)}
             </p>
           </div>
-        </div>
+        </Link>
       ))}
     </div>
   );
 };
 
 export default HorizontalCards;
+
+
